@@ -1,4 +1,5 @@
 import React from 'react'
+import gossipImage from '../../assets/image/gossipgirl-fotohome.jpg'
 
 function Home() {
     return (
@@ -10,7 +11,7 @@ function Home() {
                             Gossip Girl
                         </h2>
                         <p className="text-xl">
-                            Expresse aqui seus segredos, ou o dos outros
+                            Conte aqui seu segredo, ou o dos outros
                         </p>
 
                         <div className="flex justify-around gap-4">
@@ -22,7 +23,7 @@ function Home() {
 
                     <div className="flex justify-center">
                         <img
-                            src="https://i.imgur.com/fyfri1v.png"
+                            src= {gossipImage}
                             alt="Imagem Página Home"
                             className="w-2/3"
                         />
