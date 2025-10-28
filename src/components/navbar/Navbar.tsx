@@ -24,10 +24,10 @@ function Navbar() {
                     </Link>
 
                     <div className='flex gap-4'>
-                        Postagens
-                        Temas
-                        Cadastrar tema
-                        Perfil
+                        <Link to ='/postagens' className=' rounded-lg px-4 py-2 hover:bg-[#4B0000]'>Postagens</Link>
+                        <Link to ='/temas' className=' rounded-lg px-4 py-2 hover:bg-[#4B0000]'>Temas</Link>
+                        <Link to ='/cadastrartema' className=' rounded-lg px-4 py-2 hover:bg-[#4B0000]'>Cadastrar Tema</Link>
+                        <Link to ='/perfil' className=' rounded-lg px-4 py-2 hover:bg-[#4B0000]'>Perfil</Link>
                         <Link to ='' onClick={logout} className=' rounded-lg px-4 py-2 hover:bg-[#4B0000]'>Sair</Link>
                     </div>
                 </div>
