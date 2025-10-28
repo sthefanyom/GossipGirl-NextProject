@@ -14,11 +14,11 @@ function Navbar() {
     
     return (
         <>
-            <div className='w-full flex justify-center py-4 bg-indigo-900 text-white'>
+            <div className='w-full flex justify-center py-4 bg-black text-white'>
                 <div className="container flex justify-between text-lg mx-8">
                     <Link 
                         to='/home' 
-                        className='rounded-lg px-4 py-2 hover:bg-indigo-700 transform hover:scale-110 transition-transform duration-300 font-semibold text-xl'
+                        className='rounded-lg px-4 py-2 hover:bg-[#4B0000] transform hover:scale-110 transition-transform duration-300 font-semibold text-xl'
                     >
                         Gossip Girl
                     </Link>
@@ -28,7 +28,7 @@ function Navbar() {
                         Temas
                         Cadastrar tema
                         Perfil
-                        <Link to ='' onClick={logout} className='hover:underline'>Sair</Link>
+                        <Link to ='' onClick={logout} className=' rounded-lg px-4 py-2 hover:bg-[#4B0000]'>Sair</Link>
                     </div>
                 </div>
             </div>
