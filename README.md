@@ -37,9 +37,8 @@ Essas cores transmitem **sofisticação, contraste e intensidade**, remetendo à
 
 ## 🖼️ Prévia Visual  
 
-<p align="center">
-  <img src="https://i.imgur.com/v6QBCJs.gif" alt="Prévia GossipGirl NextProject" width="800"/>
-</p>
+![Prévia GossipGirl NextProject](https://i.imgur.com/v6QBCJs.gif)
+
 
 > Interface com tons de preto, cinza e vinho, layout limpo e visual refinado.
 
