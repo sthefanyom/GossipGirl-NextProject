@@ -4,6 +4,7 @@ import { useContext, useEffect, useState, type ChangeEvent, type FormEvent } fro
 import { AuthContext } from "../../../contexts/AuthContext"
 import { ClipLoader } from "react-spinners"
 import { buscar, atualizar, cadastrar } from "../../../services/Service"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 function FormTema() {
 
@@ -33,7 +34,7 @@ function FormTema() {
 
         useEffect(() => {
             if (token === '') {
-                alert('Você precisa estar logado!')
+                ToastAlerta("Você precisa estar logado!", "erro")
                 navigate ('/')
             }
         }, [token])
@@ -64,13 +65,13 @@ function FormTema() {
                     await atualizar (`/temas`, tema, setTema, {
                         headers: { 'Authorization': token}
                     })
-                    alert('O Tema foi atualizado com sucesso!')
+                    ToastAlerta("O tema foi atualizado com sucesso!", "sucesso")
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 } catch (error:any) {
                     if (error.toString().includes('401')) {
                         handleLogout()
                     } else {
-                        alert('Erro ao atualizar o tema.')
+                        ToastAlerta("Erro ao atualizar o tema.", "erro")
                     }
                 }
             } else {
@@ -78,13 +79,13 @@ function FormTema() {
                     await cadastrar(`/temas`, tema, setTema, {
                         headers: { 'Authorization': token }
                     })
-                    alert('O tema foii cadastrado com sucesso"')
+                    ToastAlerta("O tema foi cadastrado com sucesso!", "sucesso")
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 } catch (error: any) {
                     if (error.toString().includes('401')) {
                         handleLogout();
                     } else {
-                        alert('Erro ao cadastrar o tema.')
+                        ToastAlerta("Erro ao cadastrar o tema.", "erro")
                     }
                 }
             }
